@@ -1,15 +1,14 @@
 import React, { useState } from 'react'
+import backgroundimage from './assets/backgroundimg.jpg' 
+import Weathercard from './Weather';
 
-import './App.css'
-import backgroundimg from './assets/backgroundimg.jpg' 
-import Weathercard from '../Weathercard'
 function App() {
   const [name,setName] = useState('');
 
    return (
     <div
     className="h-screen w-full bg-cover bg-center flex flex-col items-center justify-start p-4"
-    style={{ backgroundImage: `url(${backgroundimg})` }}
+    style={{ backgroundImage: `url(${backgroundimage})` }}
   >
     <h1 className="text-yellow-500 text-4xl font-bold mt-8 mb-6 p-4 text-center">
       Weather Forecast
@@ -29,7 +28,11 @@ function App() {
         Submit
       </button>
     </div>
-        <Weathercard />
+        
+        <Weathercard name={name}/>
+
+        
+
   </div>
   )
 }
