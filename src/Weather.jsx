@@ -2,13 +2,14 @@ import {React,useEffect,useState} from "react";
 
 const Weathercard = ({name}) => {
     
-    const [data,setData] = useState('');
+    const [data,setData] = useState(null);
     const [error,setError] = useState('');
     const [loading, setLoading] = useState(false);
 
 
     useEffect(()=>{
-      if (!name) return;
+      const trimmedName = name.trim();
+      if (!trimmedName) return;
 
 
         const fetchweather = async () =>{
