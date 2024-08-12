@@ -4,6 +4,17 @@ import Weathercard from './Weather';
 
 function App() {
   const [name,setName] = useState('');
+  const [submitted,setSubmitted] = useState(false);
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if(name !== ""){
+      setSubmitted(true); 
+    }else{
+      console.log("Enter the country name or city name");
+    }
+  }
 
    return (
     <div
@@ -14,11 +25,12 @@ function App() {
       Weather Forecast
     </h1>
     <div className="flex w-full max-w-2xl space-x-4 mb-8 items-center">
+      <form action="" onSubmit={handleSubmit}>
       <input
         type="text"
         onChange={(e)=>{
           setName(e.target.value);
-          console.log(e.target.value);
+          // console.log(e.target.value);
         }}
         value={name}
         placeholder="Enter City or Country Name Eg:- USA,Japan,Delhi,San Francisco.."
@@ -27,6 +39,7 @@ function App() {
       <button className="h-12 px-6 bg-orange-500 text-white rounded-lg shadow-md hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500">
         Submit
       </button>
+      </form>
     </div>
         
         <Weathercard name={name}/>
