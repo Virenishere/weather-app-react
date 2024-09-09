@@ -22,7 +22,7 @@ A simple weather application built with React that allows users to check the cur
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/weather-app.git
+   git clone https://github.com/Virenishere/weather-app-react.git
    ```
 
 2. Navigate into the project directory:
@@ -63,5 +63,5 @@ This project uses the [OpenWeatherMap API](https://openweathermap.org/api). You 
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/your-username/weather-app/issues) or submit a pull request.
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/Virenishere/weather-app-react/issue) or submit a pull request.
 
