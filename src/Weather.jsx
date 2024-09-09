@@ -16,8 +16,9 @@ const Weathercard = ({ name }) => {
       setForecast([]); // Reset previous data before fetching new one.
 
       try {
+        const apiKey = import.meta.env.VITE_WEATHER_API_KEY; // Use Vite-specific way to access env variables
         const response = await fetch(
-          `https://api.openweathermap.org/data/2.5/forecast?q=${trimmedName}&appid=5eadd4cf80abf727db93755a78ff7a6e`
+          `https://api.openweathermap.org/data/2.5/forecast?q=${trimmedName}&appid=${apiKey}`
         );
 
         if (!response.ok) {
