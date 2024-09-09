@@ -49,12 +49,6 @@ A simple weather application built with React that allows users to check the cur
    npm start
    ```
 
-6. Open the app in your browser:
-
-   ```
-   http://localhost:3000
-   ```
-
 ## 🧪 Testing
 
 Run the following command to test the app:
