@@ -27,8 +27,8 @@ function App() {
       className="h-screen w-full bg-cover bg-center flex flex-col items-center justify-start p-4"
       style={{ backgroundImage: `url(${backgroundimage})` }}
     >
-       <h1 
-        className="text-yellow-500 text-5xl font-bold mt-12 mb-8 p-4 text-center"
+      <h1 
+        className="text-yellow-500 text-3xl md:text-4xl lg:text-5xl font-bold mt-12 mb-8 p-4 text-center"
         style={{
           textShadow: '2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000'
         }}
@@ -36,8 +36,8 @@ function App() {
         Weather Forecast
       </h1>
 
-      <div className="flex w-full max-w-lg space-x-4 mb-8 items-center">
-        <form className="flex w-full" onSubmit={handleSubmit}>
+      <div className="flex flex-col w-full max-w-lg space-y-4 md:space-y-0 md:space-x-4 mb-8 items-center md:items-start">
+        <form className="flex flex-col md:flex-row w-full" onSubmit={handleSubmit}>
           <input
             type="text"
             onChange={handleInputChange}
@@ -45,7 +45,7 @@ function App() {
             placeholder="Enter City or Country Name Eg: USA, Japan, Delhi..."
             className="flex-1 h-12 p-4 border border-gray-300 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-          <button className="h-12 px-6 ml-4 bg-orange-500 text-white rounded-lg shadow-md hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500">
+          <button className="h-12 px-6 mt-4 md:mt-0 bg-orange-500 text-white rounded-lg shadow-md hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500">
             Submit
           </button>
         </form>
